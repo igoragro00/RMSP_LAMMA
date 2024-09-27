@@ -48,7 +48,7 @@ st.sidebar.write("[Visite o site do RSRG](https://www.rsrg.net.br/)")
 st.sidebar.subheader("Metodologia")
 st.sidebar.write("""
 Para a avaliação da resistência à penetração (RP) foi utilizado um penetrômetro de impacto modelo PLANALSUCAR-STOLF de ponta fina (30°) (STOLF, 2014), cujo funcionamento consiste na penetração de uma haste com ponteira cônica, através do acionamento manual de um êmbolo de massa conhecida a uma altura constante. 
-O número de impactos para romper as camadas de 0-5, 5-10, e assim sucessivamente é quantificado e aplicado na equação 1.
+O número de impactos para romper as camadas de 0-10, 10-20, e assim sucessivamente é quantificado e aplicado na equação 1.
 
 (1) RP (MPa) = (5.6 + (6.89 * I)) / 10.2
 
@@ -61,9 +61,8 @@ Em que:
 st.sidebar.image("https://www.researchgate.net/profile/Carlos-Alberto-Campos/publication/280086942/figure/fig1/AS:669550257389584@1536644629739/Figura-03-Esquema-Penetrometro-de-Impacto_W640.jpg", caption="Penetrômetro de Impacto", use_column_width=True)
 
 # Função para gerar as dicas de subsolagem
-def dicas_para_subsolagem ():
+def dicas_para_subsolagem():
     return """
-
 1. Escolha uma profundidade 5 cm abaixo da camada compactada.
 Use a fórmula: P = (5 a 7) x largura da ponteira (b).
 Exemplo: Se a largura da ponteira for 7 cm, a profundidade deve ser entre 35 e 49 cm.
@@ -73,8 +72,7 @@ Ponteiras com asas: Espaçamento entre 1,5 e 2,0 vezes a profundidade (P).
 Exemplo: Para uma profundidade de 40 cm, o espaçamento seria de 40 a 60 cm (sem asas) e de 60 a 80 cm (com asas).
 3. Trabalhe com uma velocidade de operação entre 4 e 6 km/h para garantir eficiência no rompimento do solo.
 4. Realize a subsolagem com o solo levemente úmido para facilitar o rompimento da camada compactada e evitar danos.
-
-    """
+"""
 
 # Função para gerar o PDF
 def gerar_pdf(resultados, media_rp_antes, media_rp_depois, dicas, fig):
@@ -151,8 +149,8 @@ st.image(LOGO_LAMMA_URL_HEADER, use_column_width=True)
 st.markdown("**APP desenvolvido pelo LAMMA - Laboratório de Máquinas e Mecanização Agrícola da UNESP/Jaboticabal**")
 st.subheader("Parâmetros de Entrada")
 
-# Camadas de 5 em 5 cm até 50 cm
-camadas = ['0-5', '5-10', '10-15', '15-20', '20-25', '25-30', '30-35', '35-40', '40-45', '45-50']
+# Camadas de 10 em 10 cm até 50 cm
+camadas = ['0-10', '10-20', '20-30', '30-40', '40-50']
 
 with st.form("input_form"):
     st.header("Dados Antes da Subsolagem")
@@ -212,6 +210,7 @@ if submitted:
 
         # Botão para download do PDF
         st.download_button(label="Baixar Relatório em PDF", data=pdf_output, file_name="relatorio_resistencia_penetracao.pdf", mime="application/pdf")
+
 
         
  #streamlit run "c:/Users/Igor Vieira/App_Lamma/RMSP_lamma.py"
