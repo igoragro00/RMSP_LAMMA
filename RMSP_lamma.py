@@ -105,7 +105,7 @@ Em que:
 - RP – resistência à penetração;
 - I – número de impactos.
 """)
-st.sidebar.image("https://www.researchgate.net/profile/Carlos-Alberto-Campos/publication/280086942/figure/fig1/AS:669550257389584@1536644629739/Figura-03-Esquema-Penetrometro-de-Impacto_W640.jpg", caption="Penetrômetro de Impacto", use_column_width=True)
+st.sidebar.image("https://www.researchgate.net/profile/Carlos-Alberto-Campos/publication/280086942/figure/fig1/AS:669550257389584@1536644629739/Figura-03-Esquema-Penetrometro-de-Impacto_W640.jpg", caption="Penetrômetro de Impacto", use_container_width=True)
 
 # Interface principal
 st.title("Sistema de Avaliação de Resistência Mecânica do Solo à Penetração (RMSP)")
