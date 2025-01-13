@@ -109,7 +109,7 @@ st.sidebar.image("https://www.researchgate.net/profile/Carlos-Alberto-Campos/pub
 
 # Interface principal
 st.title("Sistema de Avaliação de Resistência Mecânica do Solo à Penetração (RMSP)")
-st.image(LOGO_LAMMA_URL_HEADER, use_column_width=True)
+st.image(LOGO_LAMMA_URL_HEADER, use_container_width=True)
 st.markdown("**APP DESENVOLVIDO PELO LAMMA - LABORATÓRIO DE MÁQUINAS E MECANIZAÇÃO AGRÍCOLA DA  UNESP/JABOTICABAL**")
 st.subheader("Parâmetros de Entrada")
 
