@@ -86,6 +86,7 @@ st.sidebar.write("""
 **RESPONSÁVEIS:**  
 - Prof. Dr. Rouverson Pereira da Silva – FCAV/UNESP [Linkedin](https://www.linkedin.com/in/rouverson-pereira-da-silva/)
 - Msc. Igor Cristian de Oliveira Vieira - FCAV/UNESP [Linkedin](https://www.linkedin.com/in/eng-igor-vieira/)
+- Msc. Breno dos Santos Silva - FCAV/UNESP [Linkedin](https://www.linkedin.com/in/breno-santos-a47606250/)
 """)
 
 st.sidebar.subheader("REALIZAÇÃO")
